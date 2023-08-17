@@ -11,7 +11,7 @@ def calculateFreqBases(DNA):
         freq_map[base] += 1
     print(freq_map)
 
-with open("rosalind_dna.txt","r") as f:
+with open("datasets/rosalind_dna.txt","r") as f:
     dna = f.read().splitlines()
 
 calculateFreqBases(dna[0])

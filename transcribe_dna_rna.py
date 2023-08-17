@@ -6,7 +6,7 @@ def transcribe_dna_rna(DNA):
     RNA = DNA.replace("T","U")
     print(RNA)            
 
-with open("rosalind_rna.txt","r") as f:
+with open("datasets/rosalind_rna.txt","r") as f:
     dna = f.read().splitlines()
 
 transcribe_dna_rna(dna[0])
