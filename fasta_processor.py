@@ -21,6 +21,7 @@ def get_sequence(file_name):
         else:
             all_sequence.append(prevStr)
             prevStr = ""
+    all_sequence.append(prevStr)
     return all_sequence
 
 def get_sequence_label(file_name):
