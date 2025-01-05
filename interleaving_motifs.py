@@ -38,8 +38,12 @@ def main_function(stra, strb):
             i += 1
             j += 1
         else:
-            pos_a = map_a[strb[j]][0] # getting the position if I pick base_a
-            pos_b = map_b[stra[i]][0] # getting the position if I pick base_b
+            pos_a = 100
+            pos_b = 100
+            if strb[j] in map_a and len(map_a[strb[j]]) > 0:
+                pos_a = map_a[strb[j]][0] # getting the position if I pick base_a
+            if stra[i] in map_b and len(map_b[stra[i]]) > 0:
+                pos_b = map_b[stra[i]][0] # getting the position if I pick base_b
             if pos_a > pos_b:
                 #remove base_b current index from its map
                 map_b[strb[j]].pop()
@@ -62,5 +66,5 @@ def main_function(stra, strb):
 
 res = main_function("ATCTGAT","TGCATA")
 print(res)
-
-
+second_test = main_function("ACGTC","ATAT")
+print(second_test)
